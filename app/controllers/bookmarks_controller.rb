@@ -1,8 +1,11 @@
 class BookmarksController < ApplicationController
-  
+
   def new
     @list = List.find(params[:list_id])
     @bookmark = Bookmark.new
+
+    # @powers = @alien.powers -> all powers that alien has
+    # @powers = Power.where.not(id: @alien.powers).order(name: asc) -> powers that it doesnt have and ordering them ascending 
   end
 
   def create
