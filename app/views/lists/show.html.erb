@@ -1,5 +1,27 @@
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <%# if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "My list",  lists_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Add movies", new_list_bookmark_path(@list), class: "nav-link" %>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1635100431192-180372735b06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);">
-  <%= link_to 'See full lists', lists_path, class: 'btn btn-warning' %>
+  <h1 class="text-center"> I see you looking at my list 👀</h1>
 </div>
 <div class="container mt-4">
   <div class="cards">
